@@ -1,4 +1,4 @@
-name               = "greg-eks-demo"
+name               = "greg-eks-example"
 vpc_cidr           = "172.31.208.0/22"
 key_name           = "devops-training"
 kubernetes_version = "1.19"
