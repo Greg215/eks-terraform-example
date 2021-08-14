@@ -62,4 +62,4 @@
 5. The 'grafana-dashboard.png' is the grafana dashboard that can be created for the monitoring purposes.
 6. The 'pod-cpu.png' is the panel for the wordpress pod cpu status.
 7. The 'pod-memory.png' is the panel for the workpress pod memory status.
-8. The ![#1589F0] (datasource-config.png) `#1589F0` is the config for adding prometheus datasource which using internal k8s dns.
+8. The *datasource-config.png* is the config for adding prometheus datasource which using internal k8s dns.
