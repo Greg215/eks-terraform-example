@@ -12,6 +12,7 @@
 11. To apply it: ***terraform apply***
 12. To destroy it: ***terraform destroy***
 
+       
 ## Install Helm operator
 1. The code under folder: ***helm-operator***
 2. It will create a new namespace: ***helm***
@@ -21,12 +22,14 @@
 6. To apply the customresource run: ***kubectl apply -f helm-customresource.yaml***
 6. To apply the rbac run: ***kubectl apply -f helm-rbac.yaml***
 
+       
 ## Install Nginx Operator for Ingress
 1. The code under folder: ***ingress-operator***
 2. It will create a new namespace for ingress
 3. It will deploy the ingress by using helm chart via ***fluxcd***
 4. To apply it run: ***kubectl apply -f nginx-operator.yaml***
 
+     
 ## Install Wordpress with bitnami helm chart
 1. The helm chart from bitnami can be found here: https://github.com/bitnami/charts/tree/master/bitnami/wordpress/#installing-the-chart
 2. The values.yaml file can be found in the folder: ***wordpress***
@@ -39,6 +42,7 @@
 9. Install the helm chart: ***helm install -f values.yaml greg-wordpress bitnami/wordpress -n wordpress***
 10. For the backup and recovery purposes, can use the external database
 
+       
 ## Install Prometheus and Grafana with helm chart
 1. The values file can be found under folder: ***monitoring***
 2. The helm chart for prometheus can be found: https://github.com/prometheus-community/helm-charts
@@ -54,6 +58,7 @@
 12: To uninstall: ***helm uninstall prometheus prometheus-community/prometheus -n monitoring***
 13. For grafana login ***username: admin, pwd: grafana***
 
+     
 ## The screen shots
 1. The folder screen-shot list all the screen shot of the deployment I have done for the tasks.
 2. The ***namespace-list.png*** is the namespaces that will be created during the deployment
