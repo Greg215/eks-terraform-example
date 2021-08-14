@@ -9,3 +9,5 @@
 
 # Tfvars
 #*.tfvars
+
+eks_tr_config
