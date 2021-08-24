@@ -18,7 +18,7 @@ podTemplate(label: label, containers: [
                 command: 'cat')
 ]) {
     node(label) {
-        withAWS(credentials: 'aws-secret', region: 'ap-southeast-1') {
+        withAWS(credentials: 'aws-id', region: 'ap-southeast-1') {
             stage('Notify') {
                 slackSend channel: "${notify_channel}", color: "warning", message: "EKS cluster updating ${build_info} (<${env.BUILD_URL}|see details>)"
             }
