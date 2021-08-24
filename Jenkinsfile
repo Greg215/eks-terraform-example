@@ -13,7 +13,7 @@ properties([parameters([
 
 podTemplate(label: label, containers: [
         containerTemplate(name: 'jenkins-agent',
-                image: "hashicorp/terraform:${env.terraform_version}",
+                image: "greghu/terraform-0.12.31:latest",
                 ttyEnabled: true,
                 command: 'cat')
 ]) {
