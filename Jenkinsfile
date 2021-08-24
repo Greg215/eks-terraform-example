@@ -65,7 +65,7 @@ podTemplate(label: label, containers: [
                     stage('Destroy') {
                         dir("terraform-eks") {
                             if (env.terraform_action == "remove") {
-                                sh 'terraform plan -destroy'
+                                sh 'terraform destroy -auto-approve'
                             } else {
                                 echo "Skip Destroy due to not match."
                             }
