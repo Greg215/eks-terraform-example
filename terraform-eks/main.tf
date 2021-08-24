@@ -7,14 +7,17 @@ locals {
   kubernetes_config_map_id   = module.eks_cluster.kubernetes_config_map_id
 }
 
+git@github.com:Greg215/k8s-example.git
+https://github.com/Greg215/k8s-example.git
+
 module "vpc" {
-  source     = "git::ssh://git@github.com/Greg215/terraform-aws-eks.git//vpc"
+  source     = "git::https://github.com/Greg215/k8s-example.git//vpc"
   name       = var.name
   cidr_block = var.vpc_cidr
 }
 
 module "subnets" {
-  source              = "git::ssh://git@github.com/Greg215/terraform-aws-eks.git//subnet"
+  source              = "git::https://github.com/Greg215/k8s-example.git//subnet"
   eks_cluster_name    = var.name
   vpc_id              = module.vpc.vpc_id
   igw_id              = module.vpc.igw_id
@@ -23,7 +26,7 @@ module "subnets" {
 
 # load balancer
 module "network_loadbalancer" {
-  source                = "git::ssh://git@github.com/Greg215/terraform-aws-eks.git//nlb"
+  source                = "git::https://github.com/Greg215/k8s-example.git//nlb"
   name                  = var.name
   aws_region            = var.aws_region
   vpc_id                = module.vpc.vpc_id
@@ -67,7 +70,7 @@ module "network_loadbalancer" {
 }
 
 module "eks_workers" {
-  source        = "git::ssh://git@github.com/Greg215/terraform-aws-eks.git//eks-worker"
+  source        = "git::https://github.com/Greg215/k8s-example.git//eks-worker"
   name          = module.eks_cluster.eks_cluster_id
   key_name      = var.key_name
   image_id      = var.image_id
@@ -93,7 +96,7 @@ module "eks_workers" {
 }
 
 module "eks_cluster" {
-  source     = "git::ssh://git@github.com/Greg215/terraform-aws-eks.git//eks-cluster"
+  source     = "git::https://github.com/Greg215/k8s-example.git//eks-cluster"
   name       = var.name
   vpc_id     = module.vpc.vpc_id
   subnet_ids = module.subnets.public_subnet_ids
@@ -106,7 +109,7 @@ module "eks_cluster" {
 }
 
 module "route53" {
-  source  = "git::ssh://git@github.com/Greg215/terraform-aws-eks.git//route53-records"
+  source  = "git::https://github.com/Greg215/k8s-example.git//route53-records"
   zone_id = var.route53_zone_id
   type    = "CNAME"
   records = [
