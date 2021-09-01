@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: greg-tr
-          image: 898846401548.dkr.ecr.eu-central-1.amazonaws.com/simple-tr:latest
+          image: nginx:latest
           ports:
             - containerPort: 8080
 
