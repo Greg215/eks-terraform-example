@@ -15,10 +15,10 @@ spec:
         app: hello-tr
     spec:
       containers:
-        - name: hello-tr
-          image: nginx:latest
-          ports:
-            - containerPort: 80
+      - name: hello-tr
+        image: 898846401548.dkr.ecr.eu-central-1.amazonaws.com/simple-tr:latest
+        ports:
+          - containerPort: 80
 
 ---
 kind: Service
@@ -31,7 +31,7 @@ spec:
     app: hello-tr
   ports:
     - port: 80
-      targetPort: 8080
+      targetPort: 80
       protocol: TCP
 
 ---
@@ -53,4 +53,4 @@ spec:
               service:
                 name: hello-tr
                 port:
-                  number: 8080
+                  number: 80
