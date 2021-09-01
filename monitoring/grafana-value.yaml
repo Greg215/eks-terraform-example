@@ -195,8 +195,8 @@ ingress:
   pathType: Prefix
 
   hosts:
-    - grafana.training.visiontech.com.sg
-  ## Extra paths to prepend to every host configuration. This is useful when working with annotation based services.
+    - grafana.guang.tr-talent.de
+  ## Extra paths to prepend to every hosguang.tr-talent.det configuration. This is useful when working with annotation based services.
   extraPaths: []
   # - path: /*
   #   backend:

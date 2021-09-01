@@ -121,8 +121,8 @@ alertmanager:
     ## Must be provided if Ingress is enabled
     ##
     hosts:
-       - alertmanager.pushgateway.training.visiontech.com.sg
-       - alertmanager.pushgateway.training.visiontech.com.sg/alertmanager
+       - alertmanager.pushgateway.guang.tr-talent.de
+       - alertmanager.pushgateway.guang.tr-talent.de/alertmanager
 
     ## Extra paths to prepend to every host configuration. This is useful when working with annotation based services.
     extraPaths: []
@@ -757,8 +757,8 @@ server:
     ## Must be provided if Ingress is enabled
     ##
     hosts:
-       - prometheus.training.visiontech.com.sg
-       - prometheus.training.visiontech.com.sg/prometheus
+       - prometheus.guang.tr-talent.de
+       - prometheus.guang.tr-talent.de/prometheus
 
     ## Extra paths to prepend to every host configuration. This is useful when working with annotation based services.
     extraPaths: []
@@ -1077,8 +1077,8 @@ pushgateway:
     ## Must be provided if Ingress is enabled
     ##
     hosts:
-       - pushgateway.training.visiontech.com.sg
-       - pushgateway.training.visiontech.com.sg/pushgateway
+       - pushgateway.guang.tr-talent.de
+       - pushgateway.guang.tr-talent.de/pushgateway
 
     ## Extra paths to prepend to every host configuration. This is useful when working with annotation based services.
     extraPaths: []
