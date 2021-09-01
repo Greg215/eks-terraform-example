@@ -51,5 +51,7 @@ spec:
         paths:
           - path:
             backend:
-              serviceName: hello-tr
-              servicePort: 8080
+              service:
+                name: hello-tr
+                port:
+                  number: 8080
